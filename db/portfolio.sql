@@ -1,16 +1,10 @@
 -- ═══════════════════════════════════════════════════════════
--- portfolio_db.sql — Emine Kurucu Portfolio Veritabanı
--- phpMyAdmin veya MySQL CLI ile içe aktar:
---   mysql -u root -p < portfolio_db.sql
+-- portfolio.sql — Emine Kurucu Portfolio Database
+-- Import:  phpMyAdmin > Import > select this file
+--          or: mysql -u if0_41915907 -p if0_41915907_eminekurucu_portfolio < portfolio.sql
 -- ═══════════════════════════════════════════════════════════
 
-CREATE DATABASE IF NOT EXISTS `portfolio_db`
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE `portfolio_db`;
-
--- ── Tablo: projects ───────────────────────────────────────
+-- ── Table: projects ───────────────────────────────────────
 DROP TABLE IF EXISTS `projects`;
 CREATE TABLE `projects` (
   `id`          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -22,7 +16,7 @@ CREATE TABLE `projects` (
   `created_at`  DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ── Tablo: contacts ───────────────────────────────────────
+-- ── Table: contacts ───────────────────────────────────────
 DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE `contacts` (
   `id`         INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -33,25 +27,25 @@ CREATE TABLE `contacts` (
   `created_at` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ── Örnek Proje Verileri ──────────────────────────────────
+-- ── Sample project data ───────────────────────────────────
 INSERT INTO `projects` (`title`, `description`, `tags`, `github_url`, `demo_url`) VALUES
 (
-  'Klasik Görüntü İşleme vs. YOLOv8',
-  'Gerçek zamanlı kamera görüntüsü üzerinde renk ve şekil tabanlı klasik görüntü işleme teknikleri ile YOLOv8 tabanlı derin öğrenme modelini karşılaştırmalı olarak analiz ettim. İki yaklaşımın doğruluk, hız ve koşul bağımlılığı açısından performansını değerlendirdim.',
+  'Classical Computer Vision vs. YOLOv8',
+  'Comparative analysis of color/shape-based classical methods against a YOLOv8 deep learning model on live camera feed, evaluating accuracy, speed, and condition dependency.',
   'Python, OpenCV, YOLOv8',
   'https://github.com/EmineKurucu',
   ''
 ),
 (
-  'E-Ticaret Ürün Listeleme Platformu',
-  'JSON tabanlı ürün verisi ve harici API\'den çekilen fiyat bilgisiyle dinamik ürün listeleme sayfası geliştirdim. Popülerlik ve fiyat bazlı sıralama özelliği ile kullanıcı deneyimini iyileştirdim. Backend\'i Render, frontend\'i Vercel üzerinde deploy ettim.',
+  'E-Commerce Product Listing Platform',
+  'Dynamic product listing with JSON-based data and real-time pricing from an external API. Popularity and price-based sorting. Backend on Render, frontend on Vercel.',
   'React, JavaScript, Node.js, Express.js',
   'https://github.com/EmineKurucu',
   '#'
 ),
 (
-  'Creuf — Kurumsal Web Sitesi',
-  'Staj sürecinde şirket için homepage, iletişim, ürün listeleme ve ürün detay sayfalarından oluşan çok sayfalı kurumsal web sitesi geliştirdim.',
+  'Creuf — Corporate Website',
+  'Multi-page corporate website built during an internship, featuring a homepage, contact page, product listing, and product detail pages.',
   'HTML, CSS',
   'https://github.com/EmineKurucu',
   '#'
