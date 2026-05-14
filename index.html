@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emine Kurucu — Software Engineer</title>
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="dark-mode">
+
+    <!-- Nav bar -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">EK<span class="cursor-blink">_</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════ HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">// software engineer &amp; AI enthusiast</p>
+      <h1 class="hero-name">Emine<br /><span class="accent">Kurucu</span></h1>
+      <p class="hero-sub">
+        Halic University — Software Engineering, 3rd Year<br />
+        YOLO · DeepSORT · React Native · Firebase
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View My Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://github.com/EmineKurucu" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/emine-kurucu-153422367/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a href="mailto:emine.kurucu.81@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="neural-orb">
+        <div class="orb-ring r1"></div>
+        <div class="orb-ring r2"></div>
+        <div class="orb-ring r3"></div>
+        <div class="orb-core"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title"><span class="tag-open">&lt;</span>About Me<span class="tag-close">/&gt;</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a 3rd-year Software Engineering student at Halic University.
+            Through <strong>5 different internships and team experiences</strong> in
+            artificial intelligence, computer vision, and mobile development, I have
+            built end-to-end projects from research to production.
+          </p>
+          <p>
+            Using models such as YOLO, DeepSORT, and MobileNetV2 to solve real-world
+            problems, I have turned those solutions into products with React Native and
+            Firebase. I care deeply about software quality and embrace a
+            <strong>test-driven development culture</strong>.
+          </p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Internships &amp; Teams</span></div>
+            <div class="stat"><span class="stat-num">3.11</span><span class="stat-label">GPA / 4.00</span></div>
+            <div class="stat"><span class="stat-num">80%</span><span class="stat-label">Test Coverage</span></div>
+          </div>
+        </div>
+        <div class="about-info">
+          <table class="info-table">
+            <tr><th>University</th><td>Halic University</td></tr>
+            <tr><th>Department</th><td>Software Engineering</td></tr>
+            <tr><th>Graduation</th><td>June 2027 (Expected)</td></tr>
+            <tr><th>Location</th><td>Istanbul, Turkey</td></tr>
+            <tr><th>Languages</th><td>Turkish (native) · English (B1)</td></tr>
+            <tr><th>Email</th><td>emine.kurucu.81@gmail.com</td></tr>
+          </table>
+          <div class="about-activities">
+            <p class="label-small">// communities</p>
+            <span class="badge">GDG on Campus Halic</span>
+            <span class="badge">Halic CODE</span>
+            <span class="badge">Developer MultiGroup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title"><span class="tag-open">&lt;</span>Experience<span class="tag-close">/&gt;</span></h2>
+      <div class="timeline" id="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">Oct 2025 — Feb 2026</span>
+            <h3>AI Intern</h3>
+            <p class="tl-company">Black Paw Educational Technologies</p>
+            <p>Developed deep learning models for bone image classification aimed at veterinary students. Designed a multi-stage YOLO-based pipeline and performed model optimizations for mobile integration.</p>
+            <div class="tl-tags">
+              <span>Python</span><span>YOLO</span><span>TensorFlow</span><span>OpenCV</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">Oct 2025 — Present</span>
+            <h3>Computer Vision / AI Team Member</h3>
+            <p class="tl-company">Aldebaran UAV Team</p>
+            <p>Working on YOLOv11n-based object detection models and real-time target tracking with ByteTrack for combat UAV competitions.</p>
+            <div class="tl-tags">
+              <span>Python</span><span>C++</span><span>YOLOv11n</span><span>ByteTrack</span><span>OpenCV</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">Nov 2025 — Jan 2026</span>
+            <h3>Jr. Full-Stack Mobile Developer</h3>
+            <p class="tl-company">Narimaj Web Technologies</p>
+            <p>Developed 3 different mobile applications at MVP level. Achieved 80% test coverage with unit, integration, and navigation tests.</p>
+            <div class="tl-tags">
+              <span>React Native</span><span>TypeScript</span><span>Jest.js</span><span>Firebase</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">Jun 2025 — Aug 2025</span>
+            <h3>AI Engineering Intern</h3>
+            <p class="tl-company">Bluesense AI</p>
+            <p>Developed a MobileNetV2 model for detecting skin dryness and oiliness. Built a REST API with FastAPI and delivered the Dockerized project to the backend team.</p>
+            <div class="tl-tags">
+              <span>Python</span><span>MobileNetV2</span><span>FastAPI</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">Aug 2025 — Sep 2025</span>
+            <h3>Computer Vision Intern</h3>
+            <p class="tl-company">ARKHE Industrial Production Solutions</p>
+            <p>Worked on reverse engineering of PCB X-ray images; developed ANN-based models for automatic component recognition and classification.</p>
+            <div class="tl-tags">
+              <span>PyTorch</span><span>OpenCV</span><span>NumPy</span><span>Pandas</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">May 2025 — Aug 2025</span>
+            <h3>Mobile Development Intern</h3>
+            <p class="tl-company">RND Electronics and Software Corp.</p>
+            <p>Developed the company website and wrote frontend & backend unit tests for the Booktool mobile application. Gained hands-on Firebase experience.</p>
+            <div class="tl-tags">
+              <span>React</span><span>Node.js</span><span>Firebase</span><span>HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="tl-date">Jun 2024 — Apr 2025</span>
+            <h3>Computer Vision / AI Team Member</h3>
+            <p class="tl-company">SANSAR Team</p>
+            <p>Developed real-time object detection and tracking algorithms using YOLO + DeepSORT + MediaPipe for air defense systems.</p>
+            <div class="tl-tags">
+              <span>Python</span><span>YOLO</span><span>DeepSORT</span><span>MediaPipe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title"><span class="tag-open">&lt;</span>Projects<span class="tag-close">/&gt;</span></h2>
+      <p class="section-sub"></p>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated from php/projects.php via AJAX -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-num">01</span>
+            <div class="project-links">
+              <a href="#" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+          <h3>Classical Computer Vision vs. YOLOv8</h3>
+          <p>Comparative analysis of color/shape-based classical methods against a YOLOv8 deep learning model on live camera feed, evaluating accuracy, speed, and condition dependency.</p>
+          <div class="project-tags">
+            <span>Python</span><span>OpenCV</span><span>YOLOv8</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-num">02</span>
+            <div class="project-links">
+              <a href="#" target="_blank">GitHub ↗</a>
+              <a href="#" target="_blank">Demo ↗</a>
+            </div>
+          </div>
+          <h3>E-Commerce Product Listing Platform</h3>
+          <p>Dynamic product listing with JSON-based data and real-time pricing from an external API. Popularity and price-based sorting. Backend on Render, frontend on Vercel.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>Express.js</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-num">03</span>
+            <div class="project-links">
+              <a href="#" target="_blank">GitHub ↗</a>
+              <a href="#" target="_blank">Demo ↗</a>
+            </div>
+          </div>
+          <h3>Creuf — Corporate Website</h3>
+          <p>Multi-page corporate website built during an internship, featuring a homepage, contact page, product listing, and product detail pages.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
+        </div>
+      </div>
+      <div class="projects-load-state" id="projects-load-state"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title"><span class="tag-open">&lt;</span>Skills<span class="tag-close">/&gt;</span></h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>// AI &amp; Data</h4>
+          <div class="skill-items">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">TensorFlow/Keras</span>
+            <span class="skill-item">YOLO</span>
+            <span class="skill-item">OpenCV</span>
+            <span class="skill-item">NumPy</span>
+            <span class="skill-item">Pandas</span>
+            <span class="skill-item">Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>// Web &amp; Mobile</h4>
+          <div class="skill-items">
+            <span class="skill-item">React</span>
+            <span class="skill-item">React Native</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">TypeScript</span>
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">HTML5</span>
+            <span class="skill-item">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>// Backend &amp; DB</h4>
+          <div class="skill-items">
+            <span class="skill-item">PHP</span>
+            <span class="skill-item">MySQL / SQL</span>
+            <span class="skill-item">Firebase</span>
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">Express.js</span>
+            <span class="skill-item">Docker</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>// Other</h4>
+          <div class="skill-items">
+            <span class="skill-item">C / C++</span>
+            <span class="skill-item">Java / Kotlin</span>
+            <span class="skill-item">Jest.js</span>
+            <span class="skill-item">Git / GitHub</span>
+            <span class="skill-item">Swagger UI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title"><span class="tag-open">&lt;</span>Contact<span class="tag-close">/&gt;</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Have a project idea, a collaboration offer, or just want to say hello? Fill out the form and leave me a message!</p>
+          <ul class="contact-list">
+            <li>📧 <a href="mailto:emine.kurucu.81@gmail.com">emine.kurucu.81@gmail.com</a></li>
+            <li>📱 <a href="tel:+905378773657">+90 537 877 36 57</a></li>
+            <li>🌍 Istanbul, Turkey</li>
+            <li>💻 <a href="https://github.com/EmineKurucu" target="_blank">github.com/EmineKurucu</a></li>
+            <li>🔗 <a href="https://www.linkedin.com/in/emine-kurucu-153422367/" target="_blank">linkedin.com/in/emine-kurucu</a></li>
+          </ul>
+        </div>
+        <div class="contact-form-wrapper">
+          <div id="form-message" class="form-message" role="alert"></div>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your Full Name" autocomplete="name" />
+              <span class="field-error" id="err-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" />
+              <span class="field-error" id="err-email"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="Collaboration, question, etc." />
+              <span class="field-error" id="err-subject"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+              <span class="field-error" id="err-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span id="submit-text">Send Message</span>
+              <span id="submit-loading" style="display:none;">Sending...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Emine Kurucu — All rights reserved.</p>
+      <p class="footer-sub">Artificial Intelligence · Computer Vision · Mobile Development</p>
+      <p class="footer-sub" style="margin-top:10px;">
+        <a href="php/admin/login.php" style="color:var(--text-dim); font-size:0.72rem;">Admin Panel</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
