@@ -4,10 +4,13 @@ session_start();
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
     header('Location: login.php');
     exit;
+
+
 }
 
 if (isset($_SESSION['login_time']) && (time() - $_SESSION['login_time']) > 7200) {
     session_destroy();
+
     header('Location: login.php?timeout=1');
     exit;
 }
@@ -18,7 +21,7 @@ $conn    = getConnection();
 $success = '';
 $error   = '';
 
-// ── POST actions ──────────────────────────────────────────
+// POST actions 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
     if ($_POST['action'] === 'add_project') {
@@ -34,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             $stmt = $conn->prepare(
                 "INSERT INTO projects (title, description, tags, github_url, demo_url, created_at)
                  VALUES (?, ?, ?, ?, ?, NOW())"
+
             );
             $stmt->bind_param('sssss', $title, $description, $tags, $github_url, $demo_url);
             $stmt->execute() ? $success = 'Project added successfully.' : $error = 'Could not add project.';
@@ -78,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     }
 }
 
-// ── Logout ────────────────────────────────────────────────
+// Logout 
 if (isset($_GET['logout'])) {
     session_destroy();
     setcookie('last_login', '', time() - 3600, '/');
@@ -86,7 +90,7 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
-// ── Edit mode: load project ───────────────────────────────
+//  Edit mode: load project 
 $editProject = null;
 if (isset($_GET['edit'])) {
     $editId = (int)$_GET['edit'];
@@ -97,7 +101,7 @@ if (isset($_GET['edit'])) {
     $res->close();
 }
 
-// ── Fetch data ────────────────────────────────────────────
+// Fetch data 
 $projects = $conn->query("SELECT * FROM projects ORDER BY id DESC")->fetch_all(MYSQLI_ASSOC);
 $messages = $conn->query("SELECT * FROM contacts ORDER BY created_at DESC")->fetch_all(MYSQLI_ASSOC);
 $conn->close();

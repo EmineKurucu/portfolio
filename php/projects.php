@@ -1,7 +1,7 @@
 <?php
 /* ═══════════════════════════════════════════════════════════
-   projects.php — Projeleri MySQL'den çek
-   GET /php/projects.php
+   Projeler MySQL den çekilir ve JSON formatında döndürülür.
+    Sadece GET metodu desteklenir.
    ═══════════════════════════════════════════════════════════ */
 
 require_once __DIR__ . '/db.php';

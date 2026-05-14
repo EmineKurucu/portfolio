@@ -1,7 +1,8 @@
 <?php
-/* ═══════════════════════════════════════════════════════════
+/* 
    admin/login.php — Admin girişi (Session yönetimi)
-   ═══════════════════════════════════════════════════════════ */
+   Bu kısım admin panelinin girişi için burada session süresi 2 saat
+*/
 
 session_start();
 
