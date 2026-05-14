@@ -7,7 +7,15 @@
    • Projects AJAX load from php/projects.php
    ═══════════════════════════════════════════════════════════ */
 
+// EmailJS kimlik bilgileri — emailjs.com'dan alınır
+const EMAILJS_PUBLIC_KEY  = 'TLMyyUs8txO161oLE';
+const EMAILJS_SERVICE_ID  = 'service_4ja2ifv';
+const EMAILJS_TEMPLATE_ID = 'template_oqfjw9h';
+
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
 
   // ── 1. DARK / LIGHT MODE TOGGLE ───────────────────────────
   const body        = document.body;
@@ -142,23 +150,29 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const res = await fetch('php/contact.php', {
-        method: 'POST',
+      // DB'ye kaydet
+      const res  = await fetch('php/contact.php', {
+        method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body:    JSON.stringify(data),
       });
-
       const json = await res.json();
+      if (!json.success) throw new Error(json.message || 'DB error');
 
-      if (json.success) {
-        formMsg.textContent = '✅ Your message was sent successfully! I will get back to you as soon as possible.';
-        formMsg.className = 'form-message success';
-        form.reset();
-        Object.values(fields).forEach(({ el }) => el.classList.remove('invalid'));
-      } else {
-        formMsg.textContent = '❌ ' + (json.message || 'An error occurred, please try again.');
-        formMsg.className = 'form-message error';
+      // Email gönder (EmailJS)
+      if (typeof emailjs !== 'undefined') {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          name:    data.name,
+          email:   data.email,
+          subject: data.subject,
+          message: data.message,
+        });
       }
+
+      formMsg.textContent = '✅ Your message was sent successfully! I will get back to you as soon as possible.';
+      formMsg.className = 'form-message success';
+      form.reset();
+      Object.values(fields).forEach(({ el }) => el.classList.remove('invalid'));
     } catch (err) {
       formMsg.textContent = '❌ Could not connect to the server. Please try again later.';
       formMsg.className = 'form-message error';
