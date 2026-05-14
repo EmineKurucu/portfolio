@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
 require_once __DIR__ . '/db.php';
 setHeaders();
 
@@ -56,9 +59,6 @@ if (file_exists($phpmailerPath . 'PHPMailer.php')) {
     require_once $phpmailerPath . 'PHPMailer.php';
     require_once $phpmailerPath . 'SMTP.php';
     require_once $phpmailerPath . 'Exception.php';
-
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
 
     try {
         $mail = new PHPMailer(true);
