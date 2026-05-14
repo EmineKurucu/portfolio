@@ -67,8 +67,8 @@ if (file_exists($phpmailerPath . 'PHPMailer.php')) {
         $mail->SMTPAuth   = true;
         $mail->Username   = SMTP_USER;
         $mail->Password   = SMTP_PASS;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = SMTP_PORT;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
         $mail->CharSet    = 'UTF-8';
 
         $mail->setFrom(SMTP_USER, 'Portfolio Contact');

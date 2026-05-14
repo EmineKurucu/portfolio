@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     formMsg.className = 'form-message';
-    formMsg.style.display = 'none';
+    formMsg.style.display = '';
 
     if (!validateAll()) return;
 
